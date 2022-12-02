@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { filterContact } from 'redux/contactSlice';
+import { setFilter } from 'redux/filterSlice';
 import {
   FilterContainer,
   Filterlabel,
@@ -9,7 +9,7 @@ import {
 export const ContactFilter = () => {
   const dispatch = useDispatch();
   const handleSearch = e => {
-    dispatch(filterContact(e.currentTarget.value));
+    dispatch(setFilter(e.currentTarget.value));
   };
   return (
     <FilterContainer>
